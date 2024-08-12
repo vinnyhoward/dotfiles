@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+
+echo "!.zshrc" >> ~/.gitignore_global
+echo "!.bash_profile" >> ~/.gitignore_global

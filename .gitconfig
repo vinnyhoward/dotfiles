@@ -1,0 +1,7 @@
+[user]
+	name = vinnyhoward
+	email = vincenguyenhoward@gmail.com
+[core]
+	editor = nano
+[init]
+	defaultBranch = main

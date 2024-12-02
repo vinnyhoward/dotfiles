@@ -41,12 +41,27 @@ eval "$(rbenv init -)"
 # ----------------------
 # Development Environments
 # ----------------------
+# Rust environment
+source "$HOME/.cargo/env"
+
+# Java environment - update path according to your Java installation
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export ANDROID_HOME=$HOME/Library/Android/sdk
+
+# Android environment
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+# Set to your installed NDK version
+export ANDROID_NDK_HOME="$HOME/Library/Android/sdk/ndk/24.0.8215888"
 
 # Update PATH for Android development tools
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+# ---------------------
+# bun Configuration
+# ---------------------
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH" 
